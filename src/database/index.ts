@@ -20,6 +20,12 @@ const authenticate = async () => {
 const loadModels = async () => {
   // add models here
   require("./models/quiz");
+  require("./models/question");
+  require("./models/answer");
+
+  // add associations here
+  require("./models/associations/answerQuestion");
+  require("./models/associations/quizQuestion");
 };
 
 const sync = async () => {
