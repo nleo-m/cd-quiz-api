@@ -29,6 +29,8 @@ class QuizController {
         },
       });
 
+      if (!quiz) res.status(404).json({ message: "Quiz not found." });
+
       res.status(200).json(quiz);
     } catch (error) {
       console.log("Error fetching quiz: " + error);
@@ -49,6 +51,8 @@ class QuizController {
           include: { model: Answer, attributes: ["label"] },
         },
       });
+
+      if (!quiz) res.status(404).json({ message: "Quiz not found." });
 
       const total = quiz.questions.length || 0;
 
