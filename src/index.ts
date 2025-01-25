@@ -1,6 +1,8 @@
 import { Request, Response } from "express";
 import * as dotenv from "dotenv";
 
+import { startDatabase } from "./database";
+
 dotenv.config();
 
 const express = require("express");
@@ -11,6 +13,11 @@ app.get("/status", (req: Request, res: Response) => {
   res.send("Codi quiz api running successfully!");
 });
 
-app.listen(port, () => {
-  console.log(`Codi quiz listening on port ${port}`);
+app.listen(port, async () => {
+  try {
+    await startDatabase();
+    console.log(`Codi quiz listening on port ${port}`);
+  } catch (e) {
+    console.log(e);
+  }
 });
