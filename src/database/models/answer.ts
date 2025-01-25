@@ -8,7 +8,7 @@ export const Answer = sequelize.define("answer", {
     autoIncrement: true,
     primaryKey: true,
   },
-  question_id: {
+  questionId: {
     type: DataTypes.INTEGER,
     allowNull: false,
     references: {
