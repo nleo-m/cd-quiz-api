@@ -14,6 +14,8 @@ app.get("/status", (req: Request, res: Response) => {
   res.send("Codi quiz api running successfully!");
 });
 
+app.use(express.json());
+
 app.use("/quiz", quizRouter);
 
 app.listen(port, async () => {

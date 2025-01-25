@@ -11,6 +11,6 @@ quizRouter.get("/:id", async (req: Request, res: Response) => {
   return new QuizController().getQuiz(req, res);
 });
 
-quizRouter.post("/", async (req: Request, res: Response) => {
-  res.send("Post quiz answers!");
+quizRouter.post("/:id", async (req: Request, res: Response) => {
+  return new QuizController().verifyQuiz(req, res);
 });
