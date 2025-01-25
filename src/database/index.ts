@@ -19,6 +19,7 @@ const authenticate = async () => {
 
 const loadModels = async () => {
   // add models here
+  require("./models/quiz");
 };
 
 const sync = async () => {
