@@ -1,9 +1,9 @@
 import { sequelize } from "./config";
 
 export const startDatabase = async () => {
-  authenticate();
-  loadModels();
-  sync();
+  await authenticate();
+  await loadModels();
+  await sync();
 };
 
 const authenticate = async () => {
