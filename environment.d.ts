@@ -6,6 +6,15 @@ declare global {
       DB_PASSWD: string;
       DB_DATABASE: string;
       DB_HOST: string;
+      DB_DIALECT:
+        | "mysql"
+        | "postgres"
+        | "sqlite"
+        | "mariadb"
+        | "mssql"
+        | "db2"
+        | "snowflake"
+        | "oracle";
     }
   }
 }
