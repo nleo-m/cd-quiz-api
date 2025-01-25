@@ -8,7 +8,7 @@ quizRouter.get("/", async (req: Request, res: Response) => {
 });
 
 quizRouter.get("/:id", async (req: Request, res: Response) => {
-  res.send("Get quiz by ID!");
+  return new QuizController().getQuiz(req, res);
 });
 
 quizRouter.post("/", async (req: Request, res: Response) => {
