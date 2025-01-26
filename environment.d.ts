@@ -15,6 +15,7 @@ declare global {
         | "db2"
         | "snowflake"
         | "oracle";
+      FRONT_END_URL: string;
     }
   }
 }
