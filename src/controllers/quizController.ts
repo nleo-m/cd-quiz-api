@@ -56,15 +56,18 @@ class QuizController {
 
       const total = quiz.questions.length || 0;
 
-      const questionsAnswered = answers.length || 0;
-
+      let questionsAnswered = 0;
       let correctAnswers = 0;
+
       for (let answer of answers) {
         const question = quiz.questions.find(
           (q: question) => q?.id == answer.questionId
         );
 
-        if (question.correctAnswerId == answer?.answerId) correctAnswers += 1;
+        if (question) {
+          questionsAnswered += 1;
+          if (question.correctAnswerId == answer?.answerId) correctAnswers += 1;
+        }
       }
 
       const percentage = (correctAnswers / total) * 100;
