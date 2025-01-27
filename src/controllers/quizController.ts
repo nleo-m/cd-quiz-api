@@ -13,7 +13,7 @@ class QuizController {
       return res.status(200).json(quizzes);
     } catch (error) {
       console.log("Error fetching quizzes: " + error);
-      return res.status(500).json({ message: "Error fetching quizzes." });
+      return res.status(500).json({ message: "Internal server error." });
     }
   }
 
@@ -34,7 +34,7 @@ class QuizController {
       return res.status(200).json(quiz);
     } catch (error) {
       console.log("Error fetching quiz: " + error);
-      return res.status(500).json({ message: "Error fetching quiz." });
+      return res.status(500).json({ message: "Internal server error." });
     }
   }
 
@@ -82,7 +82,7 @@ class QuizController {
       return res.status(200).json(response);
     } catch (error) {
       console.log("Error verifying quiz: " + error);
-      return res.status(500).json({ message: "Error verifying quiz." });
+      return res.status(500).json({ message: "Internal server error." });
     }
   }
 }
