@@ -10,10 +10,10 @@ class QuizController {
   async getQuizzes(req: Request, res: Response) {
     try {
       const quizzes = await Quiz.findAll();
-      res.status(200).json(quizzes);
+      return res.status(200).json(quizzes);
     } catch (error) {
       console.log("Error fetching quizzes: " + error);
-      res.status(500).json({ message: "Error fetching quizzes." });
+      return res.status(500).json({ message: "Internal server error." });
     }
   }
 
@@ -29,12 +29,12 @@ class QuizController {
         },
       });
 
-      if (!quiz) res.status(404).json({ message: "Quiz not found." });
+      if (!quiz) return res.status(404).json({ message: "Quiz not found." });
 
-      res.status(200).json(quiz);
+      return res.status(200).json(quiz);
     } catch (error) {
       console.log("Error fetching quiz: " + error);
-      res.status(500).json({ message: "Error fetching quiz." });
+      return res.status(500).json({ message: "Internal server error." });
     }
   }
 
@@ -52,7 +52,7 @@ class QuizController {
         },
       });
 
-      if (!quiz) res.status(404).json({ message: "Quiz not found." });
+      if (!quiz) return res.status(404).json({ message: "Quiz not found." });
 
       const total = quiz.questions.length || 0;
 
@@ -79,10 +79,10 @@ class QuizController {
         percentage: percentage,
       };
 
-      res.status(200).json(response);
+      return res.status(200).json(response);
     } catch (error) {
       console.log("Error verifying quiz: " + error);
-      res.status(500).json({ message: "Error verifying quiz." });
+      return res.status(500).json({ message: "Internal server error." });
     }
   }
 }

@@ -8,6 +8,20 @@ import cors from "cors";
 
 dotenv.config();
 
+const swaggerUi = require("swagger-ui-express");
+const swaggerJsdoc = require("swagger-jsdoc");
+
+const options = {
+  definition: {
+    openapi: "3.0.0",
+    info: {
+      title: "Codi quiz API",
+      version: "1.0.0",
+    },
+  },
+  apis: ["./src/routes/*.ts"],
+};
+
 const express = require("express");
 const app = express();
 const port = process.env.SERVER_PORT || 4000;
@@ -24,6 +38,9 @@ var corsOptions = {
 app.use(cors(corsOptions));
 
 app.use(express.json());
+const swaggerSpec = swaggerJsdoc(options);
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use("/quiz", quizRouter);
 
