@@ -12,4 +12,12 @@ export const Quiz = sequelize.define("quiz", {
     type: DataTypes.STRING,
     allowNull: false,
   },
+  description: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
+  cover_url: {
+    type: DataTypes.STRING,
+    allowNull: true,
+  },
 });

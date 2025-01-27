@@ -25,7 +25,7 @@ class QuizController {
         include: {
           model: Question,
           attributes: ["id", "label"],
-          include: { model: Answer, attributes: ["label"] },
+          include: { model: Answer, attributes: ["id", "label"] },
         },
       });
 

@@ -24,6 +24,10 @@ const seedDatabase = async () => {
     const quizzes = [
       {
         name: "Conceitos e lógica de programação",
+        cover_url:
+          "https://miro.medium.com/v2/resize:fit:1400/0*0m1rX0H-N0QzUVDZ",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie lacus egestas tincidunt lacinia. Vivamus feugiat velit ut feugiat gravida.",
         questions: [
           {
             label: "Qual é o principal objetivo de um algoritmo?",
@@ -89,6 +93,10 @@ const seedDatabase = async () => {
 
       {
         name: "Teste seu nível de conhecimento com Javascript",
+        cover_url:
+          "https://miro.medium.com/v2/resize:fit:720/format:webp/0*FXxXHe5eVfn1T4Rf.png",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie lacus egestas tincidunt lacinia.",
         questions: [
           {
             label:
@@ -155,6 +163,10 @@ const seedDatabase = async () => {
 
       {
         name: "Teste seu nível de conhecimento com Python",
+        cover_url:
+          "https://beecrowd.com/wp-content/uploads/2024/04/2022-07-19-Melhores-cursos-de-Python.jpg",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec molestie lacus egestas tincidunt lacinia.",
         questions: [
           {
             label:
