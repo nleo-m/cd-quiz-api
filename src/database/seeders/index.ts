@@ -230,7 +230,7 @@ const seedDatabase = async () => {
       {
         name: "Conceitos de Cibersegurança",
         cover_url:
-          "https://securityintelligence.com/wp-content/uploads/2021/08/cybersecurity.jpg",
+          "https://www.tecmobile.com.br/wp-content/uploads/2022/02/ciberseguranca-scaled-1.jpg",
         description:
           "Teste seus conhecimentos sobre os fundamentos de segurança cibernética e práticas de proteção de informações.",
         questions: [
@@ -311,7 +311,7 @@ const seedDatabase = async () => {
       {
         name: "Conceitos de DevOps",
         cover_url:
-          "https://www.redhat.com/cms/managed-files/styles/xl/public/devops-content-illustration-container.svg",
+          "https://community.aws/raw-post-images/concepts/devops-essentials/images/devops_loop.jpeg?imgSize=1600x960",
         description:
           "Avalie seus conhecimentos sobre a cultura DevOps e suas práticas principais.",
         questions: [
