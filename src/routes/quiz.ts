@@ -4,13 +4,13 @@ import QuizController from "../controllers/quizController";
 export const quizRouter = Router();
 
 quizRouter.get("/", async (req: Request, res: Response) => {
-  return new QuizController().getQuizzes(req, res);
+  new QuizController().getQuizzes(req, res);
 });
 
 quizRouter.get("/:id", async (req: Request, res: Response) => {
-  return new QuizController().getQuiz(req, res);
+  new QuizController().getQuiz(req, res);
 });
 
 quizRouter.post("/:id", async (req: Request, res: Response) => {
-  return new QuizController().verifyQuiz(req, res);
+  new QuizController().verifyQuiz(req, res);
 });
