@@ -227,6 +227,150 @@ const seedDatabase = async () => {
           },
         ],
       },
+      {
+        name: "Conceitos de Cibersegurança",
+        cover_url:
+          "https://securityintelligence.com/wp-content/uploads/2021/08/cybersecurity.jpg",
+        description:
+          "Teste seus conhecimentos sobre os fundamentos de segurança cibernética e práticas de proteção de informações.",
+        questions: [
+          {
+            label: "O que é phishing?",
+            answers: [
+              { label: "a) Uma técnica de ataque que tenta adivinhar senhas." },
+              {
+                label:
+                  "b) Um método de engenharia social para enganar usuários e obter informações confidenciais.",
+              },
+              { label: "c) Um ataque que explora vulnerabilidades de rede." },
+              { label: "d) Uma técnica para invadir sistemas operacionais." },
+            ],
+          },
+          {
+            label: "O que significa o princípio do menor privilégio?",
+            answers: [
+              {
+                label:
+                  "a) Garantir que todos os usuários tenham privilégios administrativos.",
+              },
+              {
+                label:
+                  "b) Conceder apenas as permissões necessárias para que um usuário ou sistema execute suas funções.",
+              },
+              {
+                label:
+                  "c) Impedir que os administradores modifiquem configurações do sistema.",
+              },
+              { label: "d) Fornecer acesso ilimitado para todos os usuários." },
+            ],
+          },
+          {
+            label: "O que é uma VPN?",
+            answers: [
+              { label: "a) Um tipo de firewall que protege contra malware." },
+              {
+                label:
+                  "b) Uma rede privada virtual que cria um túnel seguro entre dispositivos e redes.",
+              },
+              { label: "c) Um software de proteção de antivírus." },
+              { label: "d) Uma técnica para criptografar arquivos no disco." },
+            ],
+          },
+          {
+            label:
+              "Qual dessas é uma prática de segurança cibernética eficiente?",
+            answers: [
+              { label: "a) Usar a mesma senha em todas as contas." },
+              { label: "b) Atualizar regularmente os softwares e sistemas." },
+              { label: "c) Desativar firewalls para melhorar o desempenho." },
+              { label: "d) Compartilhar credenciais com colegas de trabalho." },
+            ],
+          },
+          {
+            label: "O que é um ataque de força bruta?",
+            answers: [
+              {
+                label:
+                  "a) Uma tentativa de adivinhar credenciais testando todas as combinações possíveis.",
+              },
+              {
+                label:
+                  "b) Um ataque que desativa servidores usando tráfego excessivo.",
+              },
+              {
+                label: "c) Uma técnica para infectar computadores com malware.",
+              },
+              {
+                label:
+                  "d) Um ataque que explora vulnerabilidades no sistema operacional.",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        name: "Conceitos de DevOps",
+        cover_url:
+          "https://www.redhat.com/cms/managed-files/styles/xl/public/devops-content-illustration-container.svg",
+        description:
+          "Avalie seus conhecimentos sobre a cultura DevOps e suas práticas principais.",
+        questions: [
+          {
+            label: "O que significa DevOps?",
+            answers: [
+              { label: "a) Uma metodologia de gerenciamento de projetos." },
+              {
+                label:
+                  "b) Uma cultura que integra desenvolvimento e operações para melhorar a entrega de software.",
+              },
+              { label: "c) Um framework de desenvolvimento de software." },
+              { label: "d) Uma técnica de automação de testes." },
+            ],
+          },
+          {
+            label: "Qual é o principal objetivo do CI/CD?",
+            answers: [
+              { label: "a) Garantir a segurança de sistemas." },
+              { label: "b) Automatizar e acelerar a entrega de software." },
+              { label: "c) Gerenciar servidores em produção." },
+              { label: "d) Monitorar logs de aplicações." },
+            ],
+          },
+          {
+            label: "O que é infraestrutura como código (IaC)?",
+            answers: [
+              { label: "a) Um método de configurar hardware manualmente." },
+              {
+                label:
+                  "b) A prática de gerenciar infraestrutura através de código.",
+              },
+              { label: "c) Uma técnica de desenvolver software em nuvem." },
+              { label: "d) Um tipo de serviço de cloud computing." },
+            ],
+          },
+          {
+            label: "Qual das ferramentas abaixo é usada em DevOps?",
+            answers: [
+              { label: "a) Jenkins" },
+              { label: "b) Kubernetes" },
+              { label: "c) Docker" },
+              { label: "d) Todas as alternativas acima." },
+            ],
+          },
+          {
+            label: "O que é um pipeline de CI/CD?",
+            answers: [
+              { label: "a) Um processo de análise de dados em sistemas." },
+              {
+                label:
+                  "b) Um fluxo de automação para integração e entrega contínua.",
+              },
+              { label: "c) Um método de monitorar servidores em produção." },
+              { label: "d) Uma técnica de configuração de redes." },
+            ],
+          },
+        ],
+      },
     ];
 
     for (let q of quizzes) {
@@ -398,6 +542,107 @@ const seedDatabase = async () => {
         correctAnswerIndex: await Answer.findOne({
           where: {
             label: "a) `list.append(item)`",
+          },
+        }).then((a: any) => a.id),
+      },
+      // Quiz: Conceitos de Cibersegurança
+      {
+        quizName: "Conceitos de Cibersegurança",
+        questionLabel: "O que é phishing?",
+        correctAnswerIndex: await Answer.findOne({
+          where: {
+            label:
+              "b) Um método de engenharia social para enganar usuários e obter informações confidenciais.",
+          },
+        }).then((a: any) => a.id),
+      },
+      {
+        quizName: "Conceitos de Cibersegurança",
+        questionLabel: "O que significa o princípio do menor privilégio?",
+        correctAnswerIndex: await Answer.findOne({
+          where: {
+            label:
+              "b) Conceder apenas as permissões necessárias para que um usuário ou sistema execute suas funções.",
+          },
+        }).then((a: any) => a.id),
+      },
+      {
+        quizName: "Conceitos de Cibersegurança",
+        questionLabel: "O que é uma VPN?",
+        correctAnswerIndex: await Answer.findOne({
+          where: {
+            label:
+              "b) Uma rede privada virtual que cria um túnel seguro entre dispositivos e redes.",
+          },
+        }).then((a: any) => a.id),
+      },
+      {
+        quizName: "Conceitos de Cibersegurança",
+        questionLabel:
+          "Qual dessas é uma prática de segurança cibernética eficiente?",
+        correctAnswerIndex: await Answer.findOne({
+          where: {
+            label: "b) Atualizar regularmente os softwares e sistemas.",
+          },
+        }).then((a: any) => a.id),
+      },
+      {
+        quizName: "Conceitos de Cibersegurança",
+        questionLabel: "O que é um ataque de força bruta?",
+        correctAnswerIndex: await Answer.findOne({
+          where: {
+            label:
+              "a) Uma tentativa de adivinhar credenciais testando todas as combinações possíveis.",
+          },
+        }).then((a: any) => a.id),
+      },
+
+      // Quiz: Conceitos de DevOps
+      {
+        quizName: "Conceitos de DevOps",
+        questionLabel: "O que significa DevOps?",
+        correctAnswerIndex: await Answer.findOne({
+          where: {
+            label:
+              "b) Uma cultura que integra desenvolvimento e operações para melhorar a entrega de software.",
+          },
+        }).then((a: any) => a.id),
+      },
+      {
+        quizName: "Conceitos de DevOps",
+        questionLabel: "Qual é o principal objetivo do CI/CD?",
+        correctAnswerIndex: await Answer.findOne({
+          where: {
+            label: "b) Automatizar e acelerar a entrega de software.",
+          },
+        }).then((a: any) => a.id),
+      },
+      {
+        quizName: "Conceitos de DevOps",
+        questionLabel: "O que é infraestrutura como código (IaC)?",
+        correctAnswerIndex: await Answer.findOne({
+          where: {
+            label:
+              "b) A prática de gerenciar infraestrutura através de código.",
+          },
+        }).then((a: any) => a.id),
+      },
+      {
+        quizName: "Conceitos de DevOps",
+        questionLabel: "Qual das ferramentas abaixo é usada em DevOps?",
+        correctAnswerIndex: await Answer.findOne({
+          where: {
+            label: "d) Todas as alternativas acima.",
+          },
+        }).then((a: any) => a.id),
+      },
+      {
+        quizName: "Conceitos de DevOps",
+        questionLabel: "O que é um pipeline de CI/CD?",
+        correctAnswerIndex: await Answer.findOne({
+          where: {
+            label:
+              "b) Um fluxo de automação para integração e entrega contínua.",
           },
         }).then((a: any) => a.id),
       },
