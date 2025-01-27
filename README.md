@@ -14,17 +14,17 @@ REST API que expõe rotas para listar quizzes, obter as perguntas de determinado
      `cp src/.env.example src/.env`
 
     Defina as variáveis referente ao seu banco de dados:  
-    DB_USER=root  
-    DB_PASSWD=qwe123  
-    DB_DATABASE=codi_quiz  
-    DB_HOST=localhost  
-    DB_DIALECT=mysql
+    `DB_USER=root`  
+    `DB_PASSWD=qwe123`  
+    `DB_DATABASE=codi_quiz`  
+    `DB_HOST=localhost`  
+    `DB_DIALECT=mysql`
 
     OBS: A aplicação criará todas as tabelas necessárias, mas o banco de dados precisa existir de antemão.
 
     Defina as variáveis referente aos projetos:  
-    SERVER_PORT=4000 # porta alocada para essa API  
-    FRONT_END_URL=http://localhost:3000 # url do front-end, utilizada para configurar CORS
+    `SERVER_PORT=4000 # porta alocada para essa API`  
+    `FRONT_END_URL=http://localhost:3000 # url do front-end, utilizada para configurar CORS`
 
 3.  Rode o seeder para evitar a fadiga e popular o banco:  
     `yarn db:seed`
@@ -41,7 +41,7 @@ REST API que expõe rotas para listar quizzes, obter as perguntas de determinado
 
 ## Como utilizar a API
 
-Para mais informações sobre as rotas, seus parâmetros e exemplo de respostas: rode o projeto, e acesse http://localhost:4000/api-docs (lembre-se de utilizar o host e porta corretos) no seu browser.
+Para mais informações sobre as rotas, seus parâmetros e exemplo de respostas: rode o projeto, e acesse `http://localhost:4000/api-docs` (lembre-se de utilizar o host e porta corretos) no seu browser.
 
 ## Estrutura do banco (modelo de classes)
 
