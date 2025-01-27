@@ -11,7 +11,7 @@ REST API que expõe rotas para listar quizzes, obter as perguntas de determinado
 
 2.  Defina as variáveis de ambiente:  
      Copie o arquivo de exemplo.  
-     `cp src/.env.example src/.env`
+     `cp .env.example .env`
 
     Defina as variáveis referente ao seu banco de dados:  
     `DB_USER=root`  
