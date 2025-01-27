@@ -51,11 +51,11 @@ Para mais informações sobre as rotas, seus parâmetros e exemplo de respostas:
 
 ## Tecnologias utilizadas
 
-node@v20.18.0: Runtime.  
-typescript@^5.7.3: Tipagem.  
-ts-node@^10.9.2: Engine de execução de Typescript.
-tsx@^4.19.2: Execução persistente de TypeScript e hot-reload.
-express@^4.21.2: Utilizado para servir a API.  
-sequelize@^6.37.5: ORM utilizado para interação com o banco de dados.  
-mysql2@^3.12.0: Driver escolhido e utilizado pelo sequelize. Sendo possível instalar e utilizar outros.
-swagger-jsdoc@^6.2.8 e swagger-ui-express@^5.0.1: Documentação swagger.
+node@v20.18.0: runtime;  
+typescript@^5.7.3: tipagem;  
+ts-node@^10.9.2: engine de execução de Typescript;
+tsx@^4.19.2: execução persistente de TypeScript e hot-reload;
+express@^4.21.2: utilizado para servir a API;  
+sequelize@^6.37.5: oRM utilizado para interação com o banco de dados;  
+mysql2@^3.12.0: driver escolhido e utilizado pelo sequelize. Sendo possível instalar e utilizar outros;  
+swagger-jsdoc@^6.2.8 e swagger-ui-express@^5.0.1: documentação swagger.  
