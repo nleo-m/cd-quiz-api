@@ -46,7 +46,7 @@ Para mais informações sobre as rotas, seus parâmetros e exemplo de respostas:
 ## Estrutura do banco (modelo de classes)
 
 <div align="center">
-  <img src="/assets/class_diagram.png" width="100%" />
+  <img src="/assets/class_diagram.png" width="75%" />
 </div>
 
 ## Tecnologias utilizadas
